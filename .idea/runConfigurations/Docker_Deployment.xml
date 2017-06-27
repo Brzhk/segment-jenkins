@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Docker Deployment" type="docker-deploy" factoryName="Docker Deployment" singleton="true" server-name="Docker">
+    <deployment type="dockerfile" path="$PROJECT_DIR$/Dockerfile">
+      <settings>
+        <option name="JSONFilePath" value="$PROJECT_DIR$/container_settings.json" />
+        <option name="command" value="" />
+        <option name="containerName" value="jenkins" />
+        <option name="entrypoint" value="" />
+        <option name="envVarsExpanded" value="true" />
+        <option name="imageTag" value="latest" />
+        <option name="linksExpanded" value="true" />
+        <option name="portBindingsExpanded" value="true" />
+        <option name="startBrowserSettings">
+          <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" start="true" url="http://localhost:8080/" />
+        </option>
+        <option name="volumeBindingsExpanded" value="true" />
+      </settings>
+    </deployment>
+    <method />
+  </configuration>
+</component>

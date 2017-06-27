@@ -14,11 +14,11 @@ RUN pip install virtualenv
 USER jenkins
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
 
-COPY src/main/groovy/tz.groovy /usr/share/jenkins/ref/init.groovy.d/
-COPY src/main/groovy/slaves.groovy /usr/share/jenkins/ref/init.groovy.d/
-COPY src/main/groovy/security.groovy /usr/share/jenkins/ref/init.groovy.d/
-COPY src/main/groovy/executors.groovy /usr/share/jenkins/ref/init.groovy.d/
-COPY src/main/groovy/maven.groovy /usr/share/jenkins/ref/init.groovy.d/
+COPY src/main/groovy/*.groovy /usr/share/jenkins/ref/init.groovy.d/
+#COPY src/main/groovy/slaves.groovy /usr/share/jenkins/ref/init.groovy.d/
+#COPY src/main/groovy/security.groovy /usr/share/jenkins/ref/init.groovy.d/
+#COPY src/main/groovy/executors.groovy /usr/share/jenkins/ref/init.groovy.d/
+#COPY src/main/groovy/maven.groovy /usr/share/jenkins/ref/init.groovy.d/
 
 COPY src/main/resources/plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
